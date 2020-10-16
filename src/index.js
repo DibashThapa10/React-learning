@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Header from './Header';
+import Slider from './Slider';
+import Footer from './Footer';
+import Vamp10 from "./Assets/Vamp10.jpg";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const tag= (
+    <div>
+<div style={{backgroundColor:'aqua',textAlign:'center',fontSize:'24px',marginBottom:'20px'}}>
+    <Header/>
+     <p>FrontEnd</p>
+     </div>
+
+<div style={{backgroundColor:'green',textAlign:'center',fontSize:'24px'}}>
+    <Slider/>
+    <ul>
+        <li style={{listStyle:'none'}}>React JS</li>
+        <li style={{listStyle:'none'}}>Html</li>
+        <li  style={{listStyle:'none'}}>Css</li>
+        
+    </ul>
+    <img src={Vamp10} alt="vamp10" height="300px" width="250px" />
+    
+</div>
+<div style={{backgroundColor:'red',textAlign:'center',fontSize:'24px'}}>
+    <Footer/>
+    <p>Dibash Thapa</p>
+</div>
+</div>
+
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(tag, document.getElementById("root"))
